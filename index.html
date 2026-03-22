@@ -7,12 +7,23 @@
   </head>
   <body>
     <h1>Movie Search</h1>
-
-    <input type="text" id="searchInput" placeholder="Search movies..." />
-    <button id="searchBtn">Search</button>
-
-    <ul id="movieList"></ul>
-
+    <form class="form" id="searchForm">
+      <input
+        type="text"
+        name="query"
+        id="searchInput"
+        placeholder="Search movies..."
+        required
+      />
+      <button type="submit" id="searchBtn">Search</button>
+    </form>
+    <ul id="movieList" class="gallery"></ul>
+    <span class="loader is-hidden">Loading images, please wait...</span>
+    <div class="loader-container is-hidden">
+      <div class="spinner"></div>
+      <p class="loader-text">Loading movies, please wait...</p>
+    </div>
+    <button type="button" class="load-more is-hidden">Load more</button>
     <script src="script.js"></script>
   </body>
 </html>
